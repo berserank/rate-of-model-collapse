@@ -17,7 +17,7 @@ The Python script `ngram_sim.py` is designed to train an n-gram model and genera
 - `--output_file`: Path where the generated text will be saved.
 - `--n`: The value of `n` for the n-gram model (e.g., 2 for bigrams, 3 for trigrams).
 
-####Commands:
+#### Commands:
 ```bash
 python ngram_sim.py --input_file data/input.txt --output_file data/output.txt --n 3
 ```
