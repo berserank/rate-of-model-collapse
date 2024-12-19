@@ -66,7 +66,7 @@ def analyze_vocab_growth(train_file, generations_folder, output_file):
     print(f"Vocabulary size reduction ratios saved to {output_file}")
 
 if __name__ == "__main__":
-    train_file = 'ngram_sim/train_sampled.txt'
+    train_file = 'train_sampled.txt'
     generations_folder = 'tmp'
     output_file = 'tmp/vocab_sizes.npy'
     analyze_vocab_growth(train_file, generations_folder, output_file)
