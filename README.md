@@ -33,4 +33,4 @@ After generating text, `postprocess.py` is used to analyse the change in vocabul
 2. Run the script, which will generate a plot showing vocabulary reduction across generations and save the reduction ratios.
 
 ```bash
-python vocab_growth_analysis.py
+python postprocess.py
