@@ -27,3 +27,10 @@ The `ngram_sim.sh` script automates running the `ngram_sim.py` python script mul
 bash ngram_sim.sh
 ```
 
+After generating text, `postprocess.py` is used to analyse the change in vocabulary duriing N-gram LM recursive training. 
+
+1. Provide a path to the original training file (`train_file`), the folder containing the generated files (`generations_folder`), and the desired output file path to store vocabulary size reduction array (`output_file`).
+2. Run the script, which will generate a plot showing vocabulary reduction across generations and save the reduction ratios.
+
+```bash
+python vocab_growth_analysis.py
