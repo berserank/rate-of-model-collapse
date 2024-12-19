@@ -8,7 +8,7 @@ For all the models except the N-gram Language Model, code for recursive training
 
 ---
 
-## Usage
+## Usage for N-gram LMs
 
 The Python script `ngram_sim.py` is designed to train an n-gram model and generate text. Number of samples generated will be the same as number of samples in the training dataset.
 
