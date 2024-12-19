@@ -49,16 +49,16 @@ def analyze_vocab_growth(train_file, generations_folder, output_file):
         key=lambda x: int(re.search(r"generation(\d+)", x).group(1))
     )
 
-    vocab_sizes = [0]
+    vocab_sizes = [1]
     train_vocab_size = len(train_vocab)
     for file_path in generation_files:
         gen_vocab, _ = find_vocab_size(file_path)
-        reduction_ratio = (train_vocab_size - len(gen_vocab)) / train_vocab_size
+        reduction_ratio = 1-((train_vocab_size - len(gen_vocab)) / train_vocab_size)
         vocab_sizes.append(reduction_ratio)
 
     vocab_sizes = np.array(vocab_sizes)
     plt.plot(vocab_sizes)
-    plt.ylabel('Fraction of Forgotten Words')
+    plt.ylabel('Fraction of Unique Words')
     plt.xlabel('Generation')
     plt.show()
     np.save(output_file, vocab_sizes)
