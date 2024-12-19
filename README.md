@@ -10,7 +10,7 @@ For all the models except the N-gram Language Model, code for recursive training
 
 ## Usage
 
-The Python script `ngram_sim.py` is designed to train an n-gram model and generate text.
+The Python script `ngram_sim.py` is designed to train an n-gram model and generate text. Number of samples generated will be the same as number of samples in the training dataset.
 
 #### Required Arguments:
 - `--input_file`: Path to the input text file to be processed.
@@ -21,7 +21,7 @@ The Python script `ngram_sim.py` is designed to train an n-gram model and genera
 ```bash
 python ngram_sim.py --input_file data/input.txt --output_file data/output.txt --n 3
 ```
-The `ngram_sim.sh` script automates running the `ngram_sim.py` Python script multiple times. It facilitates recursive training and batch processing of text generation using an n-gram language model.
+The `ngram_sim.sh` script automates running the `ngram_sim.py` python script multiple times with n=2 (Bigram Model). It facilitates recursive training and batch processing of text generation using an n-gram language model.
 
 ```bash
 bash ngram_sim.sh
